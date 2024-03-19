@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Protest+Revolution&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Careery</title>
+
+ </head>
+  <body>
+    <!-- start header -->
+    <header class="header">
+        <nav class="navbar fixed-bottom-nav">
+          <div class="container-nav">
+            <div class="btnbox">
+            <button type="button" class="toggle" id="toggle">
+              <span></span>
+            </button>
+            </div>
+                
+            <a class="link mobile-text" href="#"></a>
+            <a class="navbar-Name" href="Home.html">Careery</a>
+            <a class="link mobile-text" href="#"> </a>
+
+            <div class="navbar-collapse" >
+              <ul class="navbar-nav">
+                <li class="item">
+                  <a class="link" href="#"> Add Job</a>
+                </li>
+                <li class="item">
+                  <a class="link" href="#"> Jobs </a>
+                </li>
+              </ul>
+              
+              <div class="side-bar ">
+
+                <div class="chat">
+                  <a class="vector" href="#" > </a>
+                </div>
+                <div class="chat">
+                  <a class="vector" href="#"  ><i class="fa-solid fa-envelope"></i></a>
+                </div>
+                <div class="chat">
+                  <a class="vector" href="Profile.html"  ><i class="fa-solid fa-user"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+    </header>
+
+     <div class="sidebar" id='sidebar'>
+      <ul class="navbar-nav ms-auto nav-section items">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#HOME">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#ABOUT">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Services">SERVICES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Community">Community</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#">User</a>
+        </li>
+     </ul>
+     </div>
+      <!-- end header -->
+
+    <div class="add-job" id="add-job-form" >
+        <h2>Add New Job Opportunity</h2>
+        <form class="add-job-form" action="add_job.php" method="post">
+            <label for="job-title">Job Title:</label>
+            <input type="text" id="job-title" name="job-title" required>
+            <label for="salary">Salary:</label>
+            <input type="number" id="salary" name="salary" required>
+            <label for="job-company">Company Name:</label>
+            <input type="text" id="job-company" name="job-company" required>
+            <label for="job-status">Job Status:</label>
+            <select id="job-status" name="job-status">
+                <option value="open">Open</option>
+                <option value="closed">Closed</option>
+            </select>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" cols="50" required></textarea>
+            <label for="years-experience">Years of Experience Required:</label>
+            <input type="number" id="years-experience" name="years-experience" required>
+            <button type="submit">Add Job</button>
+        </form>
+    </div>
+  <script>
+    var btn = document.querySelector('.toggle');
+    var btnst = true;
+    btn.onclick = function() {
+        if(btnst == true) {
+            document.querySelector('.toggle span').classList.add('toggle');
+            document.getElementById('sidebar').classList.add('sidebarshow');
+            btnst = false;
+        }else if(btnst == false) {
+            document.querySelector('.toggle span').classList.remove('toggle');
+            document.getElementById('sidebar').classList.remove('sidebarshow');
+            btnst = true;
+        }
+    }
+  </script>
+  </body>
+</html>   

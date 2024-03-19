@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Protest+Revolution&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Company_admin/style.css">
+    <title>Careery</title>
+    <style></style>
+ </head>
+  <body>
+    <!-- start header -->
+    <header class="header">
+        <nav class="navbar fixed-bottom-nav">
+          <div class="container-nav">
+            <div class="btnbox">
+            <button type="button" class="toggle" id="toggle">
+              <span></span>
+            </button>
+            </div>
+    
+            <a class="link mobile-text" href="#"></a>
+            <a class="navbar-Name" href="Home.html">Careery</a>
+            <a class="link mobile-text" href="#"></a>
+            
+            <div class="navbar-collapse" >
+              <ul class="navbar-nav">
+                <li class="item">
+                  <a class="link" href="Add_Job.html"> Add Job</a>
+                </li>
+                <li class="item">
+                  <a class="link" href="#"> Job</a>
+                </li>
+              </ul>
+              
+              <form class="btns">
+                  <a href="Login.html" class="btn btn"> Log In</button></a>
+                  <a href="Signin.html" class="btn btn">Sign Up</button></a>
+              </form>
+            </div>
+          </div>
+        </nav>
+    </header>
+    <div class="sidebar" id='sidebar'>
+      <ul class="navbar-nav ms-auto nav-section items">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#HOME">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#ABOUT">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Services">SERVICES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Community">Community</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#Contact">Contact us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Profile.html">User</a>
+        </li>
+     </ul>
+    </div>
+    <!-- end header -->
+    <!-- Sign Up As An Admin Form -->
+    <div class="signup-form">
+      <div class="Text">
+        <h2>Sign Up</h2>
+      </div>
+      <form class="signup" action="signup.php" method="post">
+          <label for="username">Username:</label>
+          <input class="inp" type="text" id="username" name="username" required>
+          <label for="password">Password:</label>
+          <input class="inp" type="password" id="password" name="password" required>
+          <label for="confirm-password">Confirm Password:</label>
+          <input class="inp" type="password" id="confirm-password" name="confirm-password" required>
+          <label for="email">Email:</label>
+          <input class="inp" type="email" id="email" name="email" required>
+          <label for="company-name">Company Name:</label>
+          <input class="inp" type="text" id="company-name" name="company-name">
+
+          <a href="#" class="btn" type="submit">Sign Up</a>
+          <h5 class="dont_have">You have an account? <a href="Login.html" >Log in </a> </h5>
+
+      </form>
+    </div>
+
+  <script>
+    var btn = document.querySelector('.toggle');
+    var btnst = true;
+    btn.onclick = function() {
+        if(btnst == true) {
+            document.querySelector('.toggle span').classList.add('toggle');
+            document.getElementById('sidebar').classList.add('sidebarshow');
+            btnst = false;
+        }else if(btnst == false) {
+            document.querySelector('.toggle span').classList.remove('toggle');
+            document.getElementById('sidebar').classList.remove('sidebarshow');
+            btnst = true;
+        }
+    }
+  </script>
+  </body>
+</html>   
