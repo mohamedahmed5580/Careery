@@ -44,7 +44,7 @@ li{
 body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  background-color:rgb(248, 247, 247);
+  background-color:linear-gradient(40deg,#8a56fe,#50e1e9,#8a56fe);
   background-size: 100%;
   background-repeat: no-repeat;
   scroll-behavior: smooth;
@@ -275,9 +275,13 @@ p {
   margin-top: 25px;
   font-weight: bold;
 }
+.col-lg-6 {
+    flex: 0 0 auto;
+    width: 50%;
+}
 .img-bg{  
 background-color: var(--main2-background);
-background: url(image/hero-bg.svg);
+background: url(Company_admin/image/hero-bg.svg);
 background-size: cover;
 background-repeat: no-repeat;
 height: 800px;
@@ -331,6 +335,13 @@ margin-top: 50px;
 .hero-content-wrapper .Get_start .fa-chevron-right{
   padding-left: 15px;
 }
+.hero-section-wrapper-5 .hero-style-5 .hero-image img {
+    width: 50%;
+    margin-top: 25px;
+}
+.hero-section-wrapper-5 .container .row .col-lg-6{
+  padding-left: 65px;
+}
     </style>
  </head>
   <body>
@@ -354,13 +365,13 @@ margin-top: 50px;
                   <a class="link" href="Company_admin/Add_Job.html"> Add Job</a>
                 </li>
                 <li class="item">
-                  <a class="link" href="#"> Offer Help</a>
+                  <a class="link" href="Company_admin/job.html">job</a>
                 </li>
               </ul>
               
               <form class="btns">
                   <a href="Login.html" class="btn btn"> Log In</button></a>
-                  <a href="Signin.html" class="btn btn">Sign Up</button></a>
+                  <a href="Signup.html" class="btn btn">Sign Up</button></a>
               </form>
             </div>
           </div>
@@ -390,26 +401,25 @@ margin-top: 50px;
      </div>
       <!-- end header -->
 
-      <section id="home" class="hero-section-wrapper-5">
-        <div class="hero-section hero-style-5 img-bg"   >
-          <div class="container land">
+      <section class="hero-section-wrapper-5">
+        <div class="hero-style-5 img-bg">
+          <div class="container">
             <div class="row">
               <div class="col-lg-6">
                 <div class="hero-content-wrapper">
-                  <h2 class="mb-30 wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">Hello!<br>Are You Ready?</h2>
-                  <p class="mb-30 wow fadeInUp" data-wow-delay=".4s" >Find the best instructors for the best learning experience.</p>
-                  <a href="welcome.html" class="btn btn-outline-primary Get_start" data-wow-delay=".6s" >Get Started <i class="fa-solid fa-chevron-right"></i> </a>
+                  <h2 class="fadeInUp">Hello!<br>Are You Ready?</h2>
+                  <p class=" fadeInUp" >Find the best job for get the best job.</p>
+                  <a href="Login.html" class="Get_start"  >Get Started <i class="fa-solid fa-chevron-right"></i> </a>
                   </div>
               </div>
-              <div class="col-lg-6 align-self-end">
-                  <div class="hero-image wow fadeInUp" data-wow-delay=".5s">
-                  <img src="image/hero-img.svg" alt="">
+              <div >
+                  <div class="fadeInUp" >
+                  <img src="Company_admin/image/hro-img.svg" alt="">
                   </div>
               </div>
             </div>
           </div>
         </div>
-        
         </section>
     
   <script>
