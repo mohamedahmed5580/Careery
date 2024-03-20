@@ -275,6 +275,62 @@ p {
   margin-top: 25px;
   font-weight: bold;
 }
+.img-bg{  
+background-color: var(--main2-background);
+background: url(image/hero-bg.svg);
+background-size: cover;
+background-repeat: no-repeat;
+height: 800px;
+margin-top: 50px;
+}
+
+.hero-section-wrapper-5 .header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: 0 0;
+}
+.hero-section-wrapper-5 .hero-style-5 .hero-image img {
+  width: 100%;
+  margin-top: 25px;
+}
+.hero-section-wrapper-5 .hero-style-5 .hero-content-wrapper {
+  padding: 100px 0;
+
+}
+.hero-section-wrapper-5 .hero-style-5 .hero-content-wrapper h2 {
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 65px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.hero-section-wrapper-5 .hero-style-5 .hero-content-wrapper p {
+  padding: 15px;
+  font-size:  x-large;
+}
+.hero-content-wrapper .Get_start {
+  height: 44px;
+  font-size: 18px;
+  font-weight: 500;
+  box-sizing: border-box;
+  line-height: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-color);
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 50px ;
+  position: relative;
+  z-index: 1;
+  padding: 0 25px;
+  overflow: hidden;
+}
+.hero-content-wrapper .Get_start .fa-chevron-right{
+  padding-left: 15px;
+}
     </style>
  </head>
   <body>
@@ -334,6 +390,28 @@ p {
      </div>
       <!-- end header -->
 
+      <section id="home" class="hero-section-wrapper-5">
+        <div class="hero-section hero-style-5 img-bg"   >
+          <div class="container land">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="hero-content-wrapper">
+                  <h2 class="mb-30 wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">Hello!<br>Are You Ready?</h2>
+                  <p class="mb-30 wow fadeInUp" data-wow-delay=".4s" >Find the best instructors for the best learning experience.</p>
+                  <a href="welcome.html" class="btn btn-outline-primary Get_start" data-wow-delay=".6s" >Get Started <i class="fa-solid fa-chevron-right"></i> </a>
+                  </div>
+              </div>
+              <div class="col-lg-6 align-self-end">
+                  <div class="hero-image wow fadeInUp" data-wow-delay=".5s">
+                  <img src="image/hero-img.svg" alt="">
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        </section>
+    
   <script>
     var btn = document.querySelector('.toggle');
     var btnst = true;

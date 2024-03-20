@@ -1,59 +1,504 @@
-<body>
-    <div class = "nav">
-        <a href = "login2.html">Home</a>
-        <a href="signup.html">Sign Up</a>
-        <a href="">About</a>
-        <a href="">Services</a>
-        <a href="">Contact</a>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Protest+Revolution&display=swap" rel="stylesheet">
+
+    <title>Careery</title>
+    <style>
+      *,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --secondary2-color: #2b0054;
+  --secondary3-color: #111112;
+  --main-color: #0883e7;
+  --main3-color: #60b3f8;
+  --secondary-color: #afc7d6;
+  --section-background: #c6e4d9;
+  --main2-background: #ffffff;
+  --transparent-color:rgba(15, 115, 143, 0.5);
+  --section-padding: 80px;
+  --main-duration: 0.5s;
+  --main-size:20px;
+}
+a{
+  text-decoration:none;
+}
+li{
+    display: block;
+    text-decoration: none;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  background-color:rgb(227, 227, 227);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  scroll-behavior: smooth;
+}
+p {
+  margin: 0px;
+  padding: 0px;
+}
+.navbar{
+    padding: 0;
+    z-index: 567;
+    
+}
+.container-nav {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+}
+.navbar .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    flex-grow: 1;
+    align-items: center;
+}
+.navbar .navbar-collapse .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    
+}
+.navbar .navbar-collapse .navbar-nav .item{
+    padding: 10px;
+    font-weight: bold;
+}
+.navbar .navbar-collapse .navbar-nav .item .link{
+    color: rgba(0, 0, 0, 0.55);
+}
+
+
+.side-bar {
+  display: flex;
+  flex-direction: row;
+  width: 139.1px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.side-bar .chat {
+  border-radius: 4px;
+  border: 1px solid #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 9.5px 12.8px 11.5px 12.8px;
+  width: 44px;
+  height: 44px;
+  box-sizing: border-box;
+  margin-left: 5px;
+}
+
+.side-bar .chat a{
+  text-decoration: none;
+  color: var(--section-background);
+}
+.side-bar .vector {
+  width: 18.1px;
+  height: 19.5px;
+}
+
+
+.header {
+  background:#fff;
+  box-shadow:0 2px 5px rgba(0,0,0,0.2);
+  color: var(--secondary2-color);
+  width:100%;
+  position:fixed;
+  margin-bottom: 15px;
+  top:0;
+  left:0;
+  z-index:1000;
+}
+.header .navbar{
+  padding: 0;
+  z-index: 567;
+}
+.header .navbar .collapse Form button{
+    width: 120px;
+    height: 40px;
+    margin-left: 10px;
+}
+.header .navbar .collapse .li .nav-item {
+    color: var(--secondary3-color);
+    padding: 10px;
+    font-weight: bold;
+}
+.header .navbar .collapse .li .nav-item :hover{
+    background-color: var(--secondary-color);
+    color: var(--secondary2-color);
+}
+.btns{
+    display: block;
+    margin-left: auto;
+}
+.btns .btn{
+    margin-right: 10px;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.btns .btn:hover{
+    background-color: var(--main-color);
+    color: var(--main2-background);
+}
+.btnbox {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+}
+.toggle {
+  background:transparent;
+  color: var(--secondary3-color);
+  border:none;
+  width:30px;
+  height:30px;
+  text-align: center;
+  cursor:pointer; 
+  outline:0;
+  margin-top: 10px;
+
+}
+.toggle span {
+  width:100%;
+  height:3px;
+  background:var(--secondary3-color);
+  display:block;
+  position:relative;
+}
+.toggle span:before,
+.toggle span:after {
+  content:'';
+  position:absolute;
+  left:0;
+  width:100%;
+  height:100%;
+  background:var(--secondary3-color);
+  transition: all 0.3s ease-out;
+}
+.toggle span:before {
+  top:-8px;
+}
+.toggle span:after {
+  top:8px;
+}
+.toggle span.toggle {
+  background:transparent;
+}
+.toggle span.toggle:before {
+  top:0;
+  transform:rotate(-45deg);
+  background:var(--secondary3-color);
+  
+}
+.toggle span.toggle:after {
+  top:0;
+  transform:rotate(45deg);
+  background:var(--secondary3-color);
+}
+.navbar-Name {
+    color: var(--secondary3-color);
+    margin-left: 28px;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "Protest Revolution", sans-serif;
+    font-style: normal;
+  }
+.navbar-Name:hover {
+    color: var(--secondary3-color);
+    
+}
+.sidebar {
+  background:#fff;
+  width:235px;
+  position:fixed;
+  top:0;
+  left:-235px;
+  height:100%;
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+  padding-top:90px;
+  transition:all 0.3s ease-out;
+  text-align: center;
+  z-index: 6;
+  color: var(--secondary2-color);
+}
+.nav-items .items{
+  display: flex;
+  flex-direction:row
+}
+.sidebar ul {
+  list-style:none;
+}
+.sidebar ul li {
+  display:block;
+  padding: 5px;
+}
+.sidebar ul li a {
+  padding:8px 15px;
+  font-size:16px;
+  color:black;
+  font-family:arial;
+  text-decoration:none;
+  text-transform: uppercase;
+  display:block;
+  position:relative;
+  z-index:1;
+  transition:all 0.3s ease-out;
+  font-weight:500;
+}
+.sidebar ul li a:before {
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:50%;
+  right:50%;
+  transform:translate(-50%,-50%);
+  width:0;
+  height:1px;
+  background:var(--main3-color);
+  z-index:-1;
+  transition:all 0.3s ease-out;
+}
+.sidebar ul li a:hover:before {
+  width:100%;
+}
+.sidebar ul li a:hover {
+  color:var(--main3-color);
+  background-color: var(--main2-background);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.sidebarshow {
+  left:0;
+}
+.mobile-text{
+  display: none;
+}
+
+.add-job{
+  display: block;
+  width: 500px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--secondary-color);
+  padding: 15px;
+}
+.add-job .add-job-form label{
+  display: block;
+  padding: 10px;
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+.signup-form,
+.login-form{
+  display: block;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 48%;
+  height: 100%;
+  padding: 40px;
+  background: white;
+  border-radius: 10px;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+.signup-form{
+  height: 800px;
+
+}
+.signup-form .Text,
+.login-form .Text{
+  display: flex;
+  width: 95%;
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+}
+.signup-form .Text h2,
+.login-form .Text h2{
+  align-self: stretch;
+  text-align: center;
+  color: var(--secondary3-color);
+  font-size: 38px;
+  font-weight: bold;
+
+  word-wrap: break-word;
+}
+.signup-form .signup label, 
+.login-form .login label {
+  margin-bottom: 10px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-15, #262626);
+  padding: 5px;
+  margin-top: 10px;
+}
+.signup-form .signup .inp,
+.login-form .login .inp{
+  border-radius: 8px;
+  border: 1px solid var(--white-95, #F1F1F3);
+  background: var(--white-99, #FCFCFD);
+  padding: 19px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.signup-form .signup .btn,
+.login-form .login .btn{
+  display: block;
+  width: 200px;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+.signup-form .signup .btn,
+.login-form .login .btn:hover{
+  background-color: var(--main-color);
+  color: var(--main2-background);
+}
+.signup-form .signup .dont_have,
+.login-form .login .dont_have{
+  text-align: center;
+  padding: 10px;
+
+}
+.signup-form .signup .dont_have a,
+.login-form .login .dont_have a{
+  color: var(--main-color);
+}
+
+
+.job-opportunities{
+  display: block;
+  margin-top: 100px;
+}
+
+    </style>
+ </head>
+  <body>
+    <!-- start header -->
+    <header class="header">
+        <nav class="navbar fixed-bottom-nav">
+          <div class="container-nav">
+            <div class="btnbox">
+            <button type="button" class="toggle" id="toggle">
+              <span></span>
+            </button>
+            </div>
+    
+            <a class="link mobile-text" href="#"></a>
+            <a class="navbar-Name" href="Home.html">Careery</a>
+            <a class="link mobile-text" href="#"></a>
+            
+            <div class="navbar-collapse" >
+              <ul class="navbar-nav">
+                <li class="item">
+                  <a class="link" href="Add_Job.html"> Add Job</a>
+                </li>
+                <li class="item">
+                  <a class="link" href="#"> Job</a>
+                </li>
+              </ul>
+              
+              <form class="btns">
+                  <a href="Login.html" class="btn btn"> Log In</button></a>
+                  <a href="Signin.html" class="btn btn">Sign Up</button></a>
+              </form>
+            </div>
+          </div>
+        </nav>
+    </header>
+    <div class="sidebar" id='sidebar'>
+      <ul class="navbar-nav ms-auto nav-section items">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#HOME">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#ABOUT">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Services">SERVICES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Community">Community</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#Contact">Contact us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Profile.html">User</a>
+        </li>
+     </ul>
     </div>
-    <div style = "text-align:center;">
-      <h1 style="font-size: 200%;"><i>Careery</i></h1>
-     <h3  style="font-size:xx-large;"> <i>Sign Up For Careery</i> </h3> 
-     <div>
-        <label for = "user">User Type</label>
-        <select list = "Users" name = "user">
-             <option value= "User"> User </option>
-             <option value="Admin"> Admin </option>
-          </select>
-       </div>
-       <br>
-     <div>
-        <span><b>Sign Up With</b></span>
-        <br>
-        <a href="" , target="_blank">Google</a>
-        <a href="" , target="_blank">Linkedin</a>
-        <a href="" , target="_blank">Github</a>
-     </div>
-     <br>
-     <div>
-        <form action="">
-            <div> 
-                <label for="use"> UserName</label>
-                <input id = "use"  name = "use" placeholder="Enter Your Username"  type = "text" required>
-            </div> 
-            <br>
-            <div> 
-                <label for="pass"> password</label>
-                <input id = "pass"  name = "pass" placeholder="Enter Your password"  type = "password" required>
-            </div> 
-            <br>
-            <div> 
-                <label for="first"> ConfirmPassword</label>
-                <input id = "pas"  name = "copas" placeholder="Confirm your password"  type = "password" required>
-            </div> 
-            <br>
-            <div> 
-                <label for="em"> Email</label>
-                <input id = "em"  name = "ema" placeholder="Enter Your email"  type = "email" required>
-            </div> 
-            <br>
-            <div>
-                <input type = "submit" value="Register">
-            </div> 
-        </form> 
-        <p>Already Have an Account ? 
-            <a href="login2.html" > Log in </a>
-        </p>
-     </div>
+    <!-- end header -->
+    <!-- Sign Up As An Admin Form -->
+    <div class="signup-form">
+      <div class="Text">
+        <h2>Sign Up</h2>
+      </div>
+      <form class="signup" action="signup.php" method="post">
+          <label for="username">Username:</label>
+          <input class="inp" type="text" id="username" name="username" required>
+          <label for="password">Password:</label>
+          <input class="inp" type="password" id="password" name="password" required>
+          <label for="confirm-password">Confirm Password:</label>
+          <input class="inp" type="password" id="confirm-password" name="confirm-password" required>
+          <label for="email">Email:</label>
+          <input class="inp" type="email" id="email" name="email" required>
+          <label for="company-name">Company Name:</label>
+          <input class="inp" type="text" id="company-name" name="company-name">
+          <a href="Company_admin/Home.html" class="btn" type="submit">Sign Up</a>
+          <h5 class="dont_have">You have an account? <a href="Login.html" >Log in </a> </h5>
+      </form>
     </div>
-</body>
+
+  <script>
+    var btn = document.querySelector('.toggle');
+    var btnst = true;
+    btn.onclick = function() {
+        if(btnst == true) {
+            document.querySelector('.toggle span').classList.add('toggle');
+            document.getElementById('sidebar').classList.add('sidebarshow');
+            btnst = false;
+        }else if(btnst == false) {
+            document.querySelector('.toggle span').classList.remove('toggle');
+            document.getElementById('sidebar').classList.remove('sidebarshow');
+            btnst = true;
+        }
+    }
+  </script>
+  </body>
+</html>   

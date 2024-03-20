@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careery</title>
+</head>
+<body>
+    <h2>Application Form</h2>
+    <h3>Personal Data</h3>
+    <form >
+        <div class="first-name-container">
+            <label for="first-name">First Name: *</label><br>
+            <input type="text" id="first-name" placeholder="Enter your First Name" autofocus required>
+        </div>
+        <br>
+        <div class="last-name-container">
+            <label for="last-name">Last Name: *</label><br>
+            <input type="text" id="last-name" placeholder="Enter your Last Name" required>
+        </div>
+        <br>
+        <div class="email-container">
+            <label for="email">Email Address: *</label><br>
+            <input type="email" id="email" placeholder="Enter your Email Address" required>
+        </div>
+        <br>
+        <div class="phone-container">
+            <label for="phone">Phone Number: *</label><br>
+            <input type="text" id="phone" placeholder="Enter your Phone Number" required>
+        </div>
+        <br>
+        <div class="l-company-container">
+            <label for="l-company">Last Company you Worked for: *</label><br>
+            <input type="text" id="l-company" placeholder="Last Company you Worked for" required>
+        </div>
+        <br>
+        <div class="date-container">
+            <label for="date">Date of Birth: </label><br>
+            <input type="date" id="date">
+        </div>
+        <br>
+        <div class="address-container">
+            <label for="address">Address: </label><br>
+            <input type="text" id="address" placeholder="Enter your Address">
+        </div>
+        <br>
+        <div class="zip-container">
+            <label for="zip-code">Zip Code: </label><br>
+            <input type="text" id="zip-code" placeholder="Enter your Zip Code">
+        </div>
+        <br>
+        <div class="city-container">
+            <label for="city">City: </label><br>
+            <input type="text" id="city" placeholder="Enter your City">
+        </div>
+        <br>
+        <div class="comments-container">
+            <label for="comments">Reference/Comments/Questions: </label><br>
+            <textarea id="comments"></textarea>
+        </div>
+        <br>
+        <hr>
+        <h3>Application Documents</h3>
+        <div class="app-letter-container">
+            <label for="app-letter">Application Letter: *</label><br>
+            <input type="file" id="app-letter" required>
+        </div>
+        <br>
+        <div class="cv-container">
+            <label for="cv">CV: *</label><br>
+            <input type="file" id="cv" required>
+        </div>
+        <br>
+        <hr>
+        <!-- <input type="submit" value="Submit Application" style="height:30px"> -->
+        <button type="submit" style="width: 150px; height:35px; color:white;background-color:rgb(6, 42, 73)">Submit Application</button>
+    </form>
+</body>
+</html>
